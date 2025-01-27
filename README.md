@@ -12,7 +12,6 @@
 and immediately fell in love with it. As I grew older, I explored different kind of hobbies. From skateboarding to playing sports and eventually picked up painting. Every hobby I commit myself to, helps me self reflect
 and helps me connect with people. I love and care for people and I try putting others first before myself. I am currently in a dicipleship program called Emmaus, located here in Compton,CA. Since being here, I have been able to maintain sobriety, get closer to God
 and become a stronger,more confident,indivdual. I am grateful and have gained some form of peace. I don't plan for my journey to come to a hault intil my last breathe.</p>
-<!![Angelic-Deliverance-1024x585](https://github.com/user-attachments/assets/5a021ece-6c59-4cbb-994f-7112f89ede1a)
- -->
+<!--[Angelic-Deliverance-1024x585](https://github.com/user-attachments/assets/5a021ece-6c59-4cbb-994f-7112f89ede1a) -->
 </body>
 </html>
