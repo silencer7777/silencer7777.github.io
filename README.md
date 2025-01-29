@@ -13,5 +13,7 @@ and immediately fell in love with it. As I grew older, I explored different kind
 and helps me connect with people. I love and care for people and I try putting others first before myself. I am currently in a dicipleship program called Emmaus, located here in Compton,CA. Since being here, I have been able to maintain sobriety, get closer to God
 and become a stronger,more confident,indivdual. I am grateful and have gained some form of peace. I don't plan for my journey to come to a hault until my last breathe.</p>
 </body>![Screenshot_20241213_150333_Facebook](https://github.com/user-attachments/assets/c768b6e9-31fc-4c6d-8915-d5db3c7c4491)
-</html>
+</body> {
+ background-color: #FFEBEE
+}</html>
 
