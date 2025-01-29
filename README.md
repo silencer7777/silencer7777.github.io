@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brett Cope's First Webpage</title>
+<title>Brett Cope's First Webpage
 </head>
 <body>
 <h1>Welcome to Brett Cope's Autobiography</h1>
@@ -14,5 +14,4 @@ and helps me connect with people. I love and care for people and I try putting o
 and become a stronger,more confident,indivdual. I am grateful and have gained some form of peace. I don't plan for my journey to come to a hault until my last breathe.</p>
 </body>![Screenshot_20241213_150333_Facebook](https://github.com/user-attachments/assets/c768b6e9-31fc-4c6d-8915-d5db3c7c4491)
 </body>
-[
-](https://placehold.it/150/ffffff/ff0000?text=hello)
+
