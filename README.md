@@ -11,8 +11,7 @@
 <p>Hello and welcome to my autobiography.My name is Brett Cope. I am a 28 year old, male, who was born in 1996. My birthplace is Apple Valley,CA. I grew up loving nature and exploring the outdoors. At the early age of 10, I hopped on a skateboard for the first time ever 
 and immediately fell in love with it. As I grew older, I explored different kind of hobbies. From skateboarding to playing sports and eventually picked up painting. Every hobby I commit myself to, helps me self reflect
 and helps me connect with people. I love and care for people and I try putting others first before myself. I am currently in a dicipleship program called Emmaus, located here in Compton,CA. Since being here, I have been able to maintain sobriety, get closer to God
-and become a stronger,more confident,indivdual. I am grateful and have gained some form of peace. I don't plan for my journey to come to a hault intil my last breathe.</p>
-<!--[Angelic-Deliverance-1024x585](https://github.com/user-attachments/assets/5a021ece-6c59-4cbb-994f-7112f89ede1a) -->
+and become a stronger,more confident,indivdual. I am grateful and have gained some form of peace. I don't plan for my journey to come to a hault until my last breathe.</p>
 </body>
 </html>
-![mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c](https://github.com/user-attachments/assets/4e8ada25-5984-4a6f-8fd9-cd55d7f217bc)
+![Uploading Screenshot_20241213_150333_Facebook.jpg…]()
