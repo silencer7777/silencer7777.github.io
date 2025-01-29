@@ -15,3 +15,4 @@ and become a stronger,more confident,indivdual. I am grateful and have gained so
 <!--[Angelic-Deliverance-1024x585](https://github.com/user-attachments/assets/5a021ece-6c59-4cbb-994f-7112f89ede1a) -->
 </body>
 </html>
+![mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c](https://github.com/user-attachments/assets/4e8ada25-5984-4a6f-8fd9-cd55d7f217bc)
