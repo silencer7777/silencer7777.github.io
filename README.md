@@ -15,5 +15,6 @@ and have become a stronger,more confident,indivdual. I am grateful and have gain
 </body>(https://github.com/user-attachments/assets/c768b6e9-31fc-4c6d-8915-d5db3c7c4491)
 </body>
 <b>Romans 12:10-Be devoted to one another in love. Honor one another above yourselves.</b>
-<a>gitub.com/silencer7777index.com</a>
+
+  <a>gitub.com/silencer7777index.com</a>
 
