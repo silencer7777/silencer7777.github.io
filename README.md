@@ -1,4 +1,4 @@
-![Uploading unnamed (2).jpg…]()
+
 # index.html
 <!DOCTYPE html>
 <html lang="en">
