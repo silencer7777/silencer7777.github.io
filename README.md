@@ -3,3 +3,10 @@
 
 
 *This website is desinged to have a 1 paragraph autobiograpy about myself. It is my first assinment given to me from my instuctor, who has been extremely helpful in getting me started with the basics.*
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
