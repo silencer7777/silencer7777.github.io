@@ -11,8 +11,8 @@
 }
 
 /* Adjust other styles for better visibility */
-html {
-  background: lightblue;
+html, body {
+  background: lightblue !important;
 }
 
 h1, h2, p, .nav a {
