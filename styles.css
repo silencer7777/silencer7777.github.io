@@ -1,9 +1,63 @@
+/* General Styles */
 body {
-  font-family: system-ui;
-  background: #f06d06;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #f06d06, #ffcc00);
   color: black;
   text-align: center;
-}h1 {
-  color: purple;
+  margin: 0;
+  padding: 0;
 }
 
+h1 {
+  color: purple;
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #333;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Navigation Bar */
+.nav {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: yellow;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
