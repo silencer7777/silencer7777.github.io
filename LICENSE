@@ -1,37 +1,42 @@
 Custom Proprietary License
-
 Copyright (c) 2025 Brett Cope
-
 All Rights Reserved
-
 1. Definitions
-   "Software" refers to the source code, documentation, and any associated files in this repository.
-   "Licensor" refers to Brett Cope, the copyright holder.
-   "Licensee" refers to any person or entity accessing or using the Software.
-
+"Software" refers to the source code, object code, documentation, and any associated files in this repository.
+"Licensor" refers to Brett Cope, the copyright holder.
+"Licensee" refers to any person or entity accessing or using the Software.
+"Third-Party Components" refers to any software, libraries, or tools included in or used by the Software that are owned by third parties.
 2. License Grant
-   The Licensor hereby grants the Licensee a non-exclusive, non-transferable, revocable license to access and view the Software solely for evaluation purposes.
-
+The Licensor hereby grants the Licensee a limited, non-exclusive, non-transferable, revocable license to access and use the Software solely for evaluation purposes. This license does not grant any rights to modify, distribute, sublicense, or sell the Software.
 3. Restrictions
-   The Licensee shall not:
-   a) Copy, modify, distribute, sell, or sublicense the Software.
-   b) Use the Software for any commercial purpose.
-   c) Reverse engineer, decompile, or disassemble the Software.
-   d) Remove or alter any copyright notices or other proprietary markings.
-
+The Licensee shall not:
+a) Copy, modify, distribute, sell, sublicense, or create derivative works of the Software.
+b) Use the Software for any commercial purpose without prior written consent from the Licensor.
+c) Reverse engineer, decompile, disassemble, or attempt to derive the source code of the Software.
+d) Remove or alter any copyright notices or proprietary markings on the Software.
+e) Use the Software in violation of applicable export control laws or regulations.
 4. Ownership
-   The Licensor retains all right, title, and interest in and to the Software, including all intellectual property rights.
-
-5. No Warranty
-   The Software is provided "AS IS", without warranty of any kind, express or implied.
-
-6. Limitation of Liability
-   In no event shall the Licensor be liable for any claim, damages, or other liability arising from the use of the Software.
-
-7. Termination
-   This license is effective until terminated. The Licensor may terminate this license at any time if the Licensee breaches any of its terms.
-
-8. Governing Law
-   This license shall be governed by and construed in accordance with the laws of [Your Jurisdiction].
-
-By accessing or using the Software, you agree to be bound by the terms of this license.
+The Licensor retains all right, title, and interest in and to the Software, including all intellectual property rights. Any third-party components included in the Software are subject to their respective licenses.
+5. Confidentiality
+The Licensee agrees to maintain the confidentiality of any proprietary information related to the Software and shall not disclose such information to any third party without prior written consent from the Licensor.
+6. Updates and Modifications
+The Licensor reserves the right to provide updates or modifications to the Software at its sole discretion. Any updates provided shall be governed by this license unless accompanied by a separate license agreement.
+7. Export Compliance
+The Licensee agrees to comply with all applicable export control laws and regulations. The Licensee shall not export or re-export the Software without obtaining all necessary licenses or approvals from relevant governmental authorities.
+8. Data Protection and Privacy
+If applicable, the Licensee agrees to handle any personal data accessed through the use of this Software in compliance with all relevant data protection laws and regulations (e.g., GDPR). The Licensor disclaims responsibility for any misuse of personal data by the Licensee.
+9. Enforcement and Penalties
+a) Any unauthorized use of the Software will result in immediate termination of this license.
+b) The Licensor reserves the right to pursue legal remedies for violations of this license agreement.
+c) The Licensee agrees to indemnify and hold harmless the Licensor against any claims arising from misuse of the Software.
+10. No Warranty
+The Software is provided "AS IS," without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+11. Limitation of Liability
+In no event shall the Licensor be liable for any direct, indirect, incidental, special, consequential damages, or other liabilities arising out of or related to your use of or inability to use the Software.
+12. Governing Law
+This license shall be governed by and construed in accordance with the laws of California, United States. Any disputes arising under this license shall be resolved exclusively in courts located in California.
+13. Third-Party Components
+The Software may include third-party components that are subject to separate licenses. The Licensee agrees to comply with all terms and conditions governing such third-party components.
+14. Termination
+This license is effective until terminated by either party. The Licensor may terminate this license immediately upon notice if the Licensee breaches any terms herein.
+By accessing or using this Software, you acknowledge that you have read and understood this agreement and ag
