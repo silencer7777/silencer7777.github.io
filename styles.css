@@ -20,5 +20,7 @@ h1, h2, p, .nav a {
 }
 
 .profile-pic {
-  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transform: scale(0.75); /* Reduces size by 25% */
+  transform-origin: center; /* Ensures scaling happens from the center */
 }
