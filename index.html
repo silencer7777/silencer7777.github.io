@@ -5,47 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brett Cope's Autobiography</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Main content and sidebar layout */
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .sidebar {
+            width: 250px; /* Adjust as needed */
+        }
+
+        /* Profile Picture Styling */
+        .profile-pic {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            transform: scale(0.75);
+            transform-origin: center;
+        }
+
+        /* Vertical Column Boxes Styling */
+        .vertical-columns {
+            display: flex;
+            flex-direction: column;
+        }
+        .column {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .column h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .column p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
 <body>
-    
     <header>
         <h1>Welcome to Brett Cope's Autobiography</h1>
         <nav>
             <ul class="nav">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#about">About Us</a></li> 
                 <li><a href="#clients">Our Clients</a></li>  
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/462165915_564648426244096_4939308627173791285_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=nWRwtPhuCDMQ7kNvgGa38Q9&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=Ak1F2qVr-kDTKxhjUv1vLZb&oh=00_AYDzJ4fxb95CGaHR_ucn6ByQhg_3jeMZeGErxgQibYC7iQ&oe=67B014E6" alt="Brett Cope" class="profile-pic">
+    <div class="main-container">
+        <div class="main-content">
+            <!-- Home Section -->
+            <section id="home">
+                <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/462165915_564648426244096_4939308627173791285_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=nWRwtPhuCDMQ7kNvgGa38Q9&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=Ak1F2qVr-kDTKxhjUv1vLZb&oh=00_AYDzJ4fxb95CGaHR_ucn6ByQhg_3jeMZeGErxgQibYC7iQ&oe=67B014E6" alt="Brett Cope" class="profile-pic">
+            </section>
 
-    </section>
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Hello. My name is Brett Cope.</p>
+                <p>I am a 28-year-old male, born in 1996 in Apple Valley, CA.</p>
+                <p>I grew up loving nature and always enjoy exploring the outdoors.</p>
+                <p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
+                <p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports, and eventually picked up painting as a recent hobby.</p>
+                <p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
+                <p>I love and care for people, and I try putting others first before myself.</p>
+            </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello. My name is Brett Cope.</p>
-<p>I am a 28-year-old male, born in 1996 in Apple Valley, CA.</p>
-<p>I grew up loving nature and always enjoy exploring the outdoors.</p>
-<p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
-        <p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports, and eventually picked up painting as a recent hobby.</p>
-<p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
-<p>I love and care for people, and I try putting others first before myself.</p>
-    </section>
+            <!-- Clients Section -->
+            <section id="clients">
+                <h2>My Journey</h2>
+                <p>I am currently in a discipleship program called Emmaus, located in Compton, CA.</p>
+                <p>Since being here, I have maintained my sobriety, gotten closer to God, and become a stronger, more confident individual.</p>
+                <p>I can't begin to express how grateful I am for the URM and all the people who have supported me. My biggest thanks go to all who have helped.</p>
+                <p>I am grateful and have gained some form of peace, so I don't plan to stop making progress and will continue to look forward.</p>
+            </section>
+        </div>
 
-    <section id="clients">
-        <h2>My Journey</h2>
-        <p>I am currently in a discipleship program called Emmaus, located in Compton, CA.</p>
-<p>Since being here, I have maintained my sobriety, gotten closer to God, and become a stronger, more confident individual.</p>
-<p>I can't begin to express how grateful I am for the URM and all the people who have supported me. My biggest thanks go to all who have helped.</p>
-<p>I am grateful and have gained some form of peace, so I don't plan to stop making progress and will continue to look forward.</p>
-    </section>
+        <div class="sidebar">
+            <!-- Vertical Column Boxes -->
+            <div class="vertical-columns">
+                <div class="column">
+                    <h3>Column 1: Introduction</h3>
+                    <p>This column contains an introduction about Brett Cope. It highlights his journey and the purpose of this autobiography.</p>
+                </div>
+                <div class="column">
+                    <h3>Column 2: Achievements</h3>
+                    <p>Here, you can find details about Brett's achievements, including his sobriety, personal growth, and other milestones in his life.</p>
+                </div>
+                <div class="column">
+                    <h3>Column 3: Future Goals</h3>
+                    <p>This column outlines Brett's future goals and aspirations, focusing on his commitment to progress and helping others.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Footer -->
     <footer>
         <b>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</b>
     </footer>
+
+    <!-- JavaScript -->
     <script src="script.js?v=1"></script>
 </body>
 </html>
