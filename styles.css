@@ -25,9 +25,10 @@ h1, h2, p, .nav a {
   transform-origin: center; /* Ensures scaling happens from the center */
 }
 .column {
-    background-color: #90EE90; /* Light Bright Green */
+    background-color: #FFB347; /* Light Orange */
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
