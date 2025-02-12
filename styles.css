@@ -12,8 +12,11 @@
 
 /* Adjust other styles for better visibility */
 html, body {
-  background: powderblue !important;
-}
+        background-image: url('https://pplx-res.cloudinary.com/image/upload/v1739383452/user_uploads/RCbhFHZbGSBfQfr/thumb-1920-1000996.jpg');
+        background-size: cover; /* Cover the entire screen */
+        background-repeat: no-repeat; /* Prevent image from repeating */
+        background-attachment: fixed; /* Keep the background fixed during scrolling */
+    }
 
 h1, h2, p, .nav a {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
