@@ -24,3 +24,10 @@ h1, h2, p, .nav a {
   transform: scale(0.75); /* Reduces size by 25% */
   transform-origin: center; /* Ensures scaling happens from the center */
 }
+.column {
+    background-color: #FF5733; /* Neon Orange */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
