@@ -7,13 +7,11 @@ if (heading) {
 // Select all <p> elements and set their font sizes
 const paragraphs = document.querySelectorAll("p");
 paragraphs.forEach((p) => {
-  p.style.fontSize = "1vw";
+  p.style.fontSize = "1.5vw";
 });
 
 // Select the first <b> element and increase its font size
 const boldText = document.querySelector("b");
 if (boldText) {
   boldText.style.fontSize = "2rem"; // Adjust as needed
-}
-  
- 
+} 
