@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brett Cope's Autobiography</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* Outer Page Border */
         .page-container {
-            border: 10px solid black; /* Black border around the page */
-            margin: 20px auto; /* Center the container */
-            padding: 20px; /* Add padding inside the border */
-            max-width: 1200px; /* Restrict maximum width */
-            background-color: #ffffff; /* White background for the content */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow for a polished look */
+            border: 10px solid black;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         /* Main content and sidebar layout */
@@ -26,12 +25,14 @@
             padding-right: 20px;
         }
         .sidebar {
-            width: 250px; /* Adjust as needed */
+            width: 250px;
         }
 
         /* Profile Picture Styling */
         .profile-pic {
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             transform: scale(0.9);
             transform-origin: center;
         }
@@ -42,7 +43,7 @@
             flex-direction: column;
         }
         .column {
-            background-color: #FFB347; /* Light Orange */
+            background-color: #FFB347;
             padding: 20px;
             margin-bottom: 20px;
             border: 1px solid #ddd;
@@ -55,6 +56,21 @@
         .column p {
             font-size: 14px;
             line-height: 1.5;
+        }
+
+        /* Navigation Styling */
+        .nav {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f8f8;
+            padding: 10px 0;
+        }
+        .nav li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
         }
 
         /* Responsive Design */
@@ -77,11 +93,9 @@
             <nav>
                 <ul class="nav">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li> 
-                    <li><a href="#clients">Our Clients</a></li>  
-                    <li><a href="#contact">Contact Us</a></li>
-                    
-    </ul>
+                    <li><a href="#about">About Me</a></li> 
+                    <li><a href="#journey">My Journey</a></li>  
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -95,17 +109,18 @@
 
                 <!-- About Section -->
                 <section id="about">
-                <p>Hello. My name is Brett Cope.</p>
-<p>I am a 28-year-old male, born in 1996 in Apple Valley, CA.</p>
-<p>I grew up loving nature and always enjoy exploring the outdoors.</p>
-<p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
-<p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports, and eventually picked up painting as a recent hobby.</p>
-<p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
-<p>I love and care for people, and I try to put others first before myself.</p>
+                    <h2>About Me</h2>
+                    <p>Hello. My name is Brett Cope.</p>
+                    <p>I am a 28-year-old male, born in 1996 in Apple Valley, CA.</p>
+                    <p>I grew up loving nature and always enjoy exploring the outdoors.</p>
+                    <p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
+                    <p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports, and eventually picked up painting as a recent hobby.</p>
+                    <p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
+                    <p>I love and care for people, and I try to put others first before myself.</p>
                 </section>
 
-                <!-- Clients Section -->
-                <section id="clients">
+                <!-- Journey Section -->
+                <section id="journey">
                     <h2>My Journey</h2>
                     <p>I am currently in a discipleship program called Emmaus, located in Compton, CA.</p>
                     <p>Since being here, I have maintained my sobriety, gotten closer to God, and become a stronger, more confident individual.</p>
@@ -135,11 +150,8 @@
 
         <!-- Footer -->
         <footer style="text-align:center;">
-            Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.
+            <p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
         </footer>
     </div>
-
-    <!-- JavaScript -->
-    <script src="script.js?v=1"></script>
 </body>
 </html>
