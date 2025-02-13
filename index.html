@@ -1,163 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brett Cope's Autobiography</title>
-    <style>
-        /* Apply background image to the body */
-        body {
-            background-image: url('https://pplx-res.cloudinary.com/image/upload/v1739383452/user_uploads/RCbhFHZbGSBfQfr/thumb-1920-1000996.jpg');
-            background-size: cover; /* Cover the entire viewport */
-            background-repeat: no-repeat; /* Prevent the image from repeating */
-            background-attachment: fixed; /* Keep the background fixed while scrolling */
-            color: black; /* Set default text color to black */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brett Cope's Autobiography</title>
+  <style>
+    /* Apply background image to the body */
+    body {
+      background-image: url('https://pplx-res.cloudinary.com/image/upload/v1739383452/user_uploads/RCbhFHZbGSBfQfr/thumb-1920-1000996.jpg');
+      background-size: cover;
+      /* Cover the entire viewport */
+      background-repeat: no-repeat;
+      /* Prevent the image from repeating */
+      background-attachment: fixed;
+      /* Keep the background fixed while scrolling */
+      color: black;
+      /* Set default text color to black */
+    }
 
-        /* Outer Page Border */
-        .page-container {
-            border: 10px solid black;
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 1200px;
-            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for readability */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
+    /* Outer Page Border */
+    .page-container {
+      border: 10px solid black;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1200px;
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Add a semi-transparent white background for readability */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
 
-        /* Main content and sidebar layout */
-        .main-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .main-content {
-            flex: 1;
-            padding-right: 20px;
-        }
-        .sidebar {
-            width: 250px;
-        }
+    /* Main content and sidebar layout */
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+    }
 
-        /* Profile Picture Styling */
-        .profile-pic {
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            transform: scale(0.9);
-            transform-origin: center;
-        }
+    .main-content {
+      flex: 1;
+      padding-right: 20px;
+    }
 
-        /* Vertical Column Boxes Styling */
-        .vertical-columns {
-            display: flex;
-            flex-direction: column;
-        }
-        .column {
-            background-color: #FFB347;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .column h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .column p {
-            font-size: 14px;
-            line-height: 1.5;
-        }
+    .sidebar {
+      width: 250px;
+    }
 
-        /* Navigation Styling */
-        .nav {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        .nav li a {
-            text-decoration: none;
-            color: #333; /* Adjust link color if needed */
-        }
+    /* Profile Picture Styling */
+    .profile-pic {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      transform: scale(0.9);
+      transform-origin: center;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100%;
-                margin-top: 20px;
-            }
-        }
-    </style>
+    /* Vertical Column Boxes Styling */
+    .vertical-columns {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column {
+      background-color: #FFB347;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .column h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .column p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Navigation Styling */
+    .nav {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .nav li a {
+      text-decoration: none;
+      color: #333;
+      /* Adjust link color if needed */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Page Container -->
-    <div class="page-container">
-        <header>
-            <h1>Welcome to Brett Cope's Autobiography</h1>
-            <nav>
-                <ul class="nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#journey">My Journey</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+  <!-- Page Container -->
+  <div class="page-container">
+    <header>
+      <h1>Welcome to Brett Cope's Autobiography</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#journey">My Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <div class="main-container">
-            <div class="main-content">
-                <!-- Home Section -->
-                <section id="home">
-                    <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/462165915_564648426244096_4939308627173791285_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=nWRwtPhuCDMQ7kNvgGa38Q9&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=Ak1F2qVr-kDTKxhjUv1vLZb&oh=00_AYDzJ4fxb95CGaHR_ucn6ByQhg_3jeMZeGErxgQibYC7iQ&oe=67B014E6" alt="Brett Cope" class="profile-pic">
-                </section>
+    <div class="main-container">
+      <div class="main-content">
+        <!-- Home Section -->
+        <section id="home">
+          <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/462165915_564648426244096_4939308627173791285_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=nWRwtPhuCDMQ7kNvgGa38Q9&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=Ak1F2qVr-kDTKxhjUv1vLZb&oh=00_AYDzJ4fxb95CGaHR_ucn6ByQhg_3jeMZeGErxgQibYC7iQ&oe=67B014E6" alt="Brett Cope" class="profile-pic">
+        </section>
 
-                <!-- About Section -->
-                <section id="about">
-                    <h2>About Me</h2>
-                    <p>Hello. My name is Brett Cope.</p>
-                    <p>I am a 28-year-old male, born in 1996 in Apple Valley, CA.</p>
-                    <p>I grew up loving nature and always enjoy exploring the outdoors.</p>
-                    <p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
-                    <p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports, and eventually picked up painting as a recent hobby.</p>
-                    <p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
-                    <p>I love and care for people, and I try to put others first before myself.</p>
-                </section>
+        <!-- About Section -->
+        <section id="about">
+          <h2>About Me</h2>
+          <p>Hello. My name is Brett Cope.</p>
+          <p>I am a 28-year-old male, born in 1996 in Apple Valley, CA.</p>
+          <p>I grew up loving nature and always enjoy exploring the outdoors.</p>
+          <p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
+          <p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports, and eventually picked up painting as a recent hobby.</p>
+          <p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
+          <p>I love and care for people, and I try to put others first before myself.</p>
+        </section>
 
-                <!-- Journey Section -->
-                <section id="journey">
-                    <h2>My Journey</h2>
-                    <p>I am currently in a discipleship program called Emmaus, located in Compton, CA.</p>
-                    <p>Since being here, I have maintained my sobriety, gotten closer to God, and become a stronger, more confident individual.</p>
-                    <p>I can't begin to express how grateful I am for the URM and all the people who have supported me. My biggest thanks go to all who have helped.</p>
-                    <p>I am grateful and have gained some form of peace, so I don't plan to stop making progress and will continue to look forward.</p>
-                </section>
-            </div>
+        <!-- Journey Section -->
+        <section id="journey">
+          <h2>My Journey</h2>
+          <p>I am currently in a discipleship program called Emmaus, located in Compton, CA.</p>
+          <p>Since being here, I have maintained my sobriety, gotten closer to God, and become a stronger, more confident individual.</p>
+          <p>I can't begin to express how grateful I am for the URM and all the people who have supported me. My biggest thanks go to all who have helped.</p>
+          <p>I am grateful and have gained some form of peace, so I don't plan to stop making progress and will continue to look forward.</p>
+        </section>
+      </div>
 
-            <div class="sidebar">
-                <!-- Vertical Column Boxes -->
-                <div class="vertical-columns">
-                    <div class="column">
-                        <h3>Column 1: Introduction</h3>
-                        <p>This column contains an introduction about Brett Cope. It highlights his journey and the purpose of this autobiography.</p>
-                    </div>
-                    <div class="column">
-                        <h3>Column 2: Achievements</h3>
-                        <p>Here, you can find details about Brett's achievements, including his sobriety, personal growth, and other milestones in his life.</p>
-                    </div>
-                    <div class="column">
-                        <h3>Column 3: Future Goals</h3>
-                        <p>This column outlines Brett's future goals and aspirations, focusing on his commitment to progress and helping others.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="sidebar">
+        <!-- Vertical Column Boxes -->
+        <div class="vertical-columns">
+          <div class="column">
+            <h3>Column 1: Introduction</h3>
+            <p>This column contains an introduction about Brett Cope. It highlights his journey and the purpose of this autobiography.</p>
+          </div>
+          <div class="column">
+            <h3>Column 2: Achievements</h3>
+            <p>Here, you can find details about Brett's achievements, including his sobriety, personal growth, and other milestones in his life.</p>
+          </div>
+          <div class="column">
+            <h3>Column 3: Future Goals</h3>
+            <p>This column outlines Brett's future goals and aspirations, focusing on his commitment to progress and helping others.</p>
+          </div>
         </div>
-
-        <!-- Footer -->
-        <footer style="text-align:center;">
-            <p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
-        </footer>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <footer style="text-align:center;">
+      <p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
+    </footer>
+  </div>
 </body>
+
 </html>
