@@ -15,3 +15,5 @@ const boldText = document.querySelector("b");
 if (boldText) {
   boldText.style.fontSize = "2rem"; // Adjust as needed
 }
+  
+ 
