@@ -1,3 +1,4 @@
+<script>
 // Set the font size for the first <h1> element
 const heading = document.querySelector("h1");
 if (heading) {
@@ -14,4 +15,18 @@ paragraphs.forEach((p) => {
 const boldText = document.querySelector("b");
 if (boldText) {
   boldText.style.fontSize = "2rem"; // Adjust as needed
-} 
+}
+
+// Add a resize event listener to adjust font sizes on window resize
+window.addEventListener('resize', () => {
+  if (heading) {
+    heading.style.fontSize = "2vw";
+  }
+  paragraphs.forEach((p) => {
+    p.style.fontSize = "1.5vw";
+  });
+  if (boldText) {
+    boldText.style.fontSize = "2rem";
+  }
+});
+</script>
