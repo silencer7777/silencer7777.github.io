@@ -174,13 +174,38 @@
       <p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
     </footer>
   </div>
-  <script>
-// Select all <p> elements
-const paragraphs = document.querySelectorAll('p');
+ <script>
+// Set the font size for the first <h1> element
+const heading = document.querySelector("h1");
+if (heading) {
+  heading.style.fontSize = "2vw";
+}
 
-// Change font size for each paragraph individually
-paragraphs.forEach((p, index) => {
-  p.style.fontSize = `${16 + index * 2}px`;
-});</body>
+// Select all <p> elements and set their font sizes
+const paragraphs = document.querySelectorAll("p");
+paragraphs.forEach((p) => {
+  p.style.fontSize = "1.5vw";
+});
+
+// Select the first <b> element and increase its font size
+const boldText = document.querySelector("b");
+if (boldText) {
+  boldText.style.fontSize = "2rem"; // Adjust as needed
+}
+
+// Add a resize event listener to adjust font sizes on window resize
+window.addEventListener('resize', () => {
+  if (heading) {
+    heading.style.fontSize = "2vw";
+  }
+  paragraphs.forEach((p) => {
+    p.style.fontSize = "1.5vw";
+  });
+  if (boldText) {
+    boldText.style.fontSize = "2rem";
+  }
+});
+</script>
+</body>
 
 </html>
