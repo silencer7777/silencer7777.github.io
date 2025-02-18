@@ -1,32 +1,24 @@
-<script>
-// Set the font size for the first <h1> element
-const heading = document.querySelector("h1");
-if (heading) {
-  heading.style.fontSize = "2vw";
-}
+javascript
+function adjustFontSizes() {
+  const heading = document.querySelector("h1");
+  const paragraphs = document.querySelectorAll("p");
+  const boldText = document.querySelector("b");
 
-// Select all <p> elements and set their font sizes
-const paragraphs = document.querySelectorAll("p");
-paragraphs.forEach((p) => {
-  p.style.fontSize = "1.5vw";
-});
-
-// Select the first <b> element and increase its font size
-const boldText = document.querySelector("b");
-if (boldText) {
-  boldText.style.fontSize = "2rem"; // Adjust as needed
-}
-
-// Add a resize event listener to adjust font sizes on window resize
-window.addEventListener('resize', () => {
   if (heading) {
-    heading.style.fontSize = "2vw";
+    heading.style.fontSize = `clamp(24px, 2vw, 48px)`;
   }
+
   paragraphs.forEach((p) => {
-    p.style.fontSize = "1.5vw";
+    p.style.fontSize = `clamp(16px, 1.5vw, 24px)`;
   });
+
   if (boldText) {
-    boldText.style.fontSize = "2rem";
+    boldText.style.fontSize = `clamp(20px, 2rem, 32px)`;
   }
-});
-</script>
+}
+
+// Run on page load
+adjustFontSizes();
+
+// Run on window resize
+window.addEventListener('resize', adjustFontSizes);
