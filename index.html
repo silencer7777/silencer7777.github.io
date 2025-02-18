@@ -6,30 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brett Cope's Autobiography</title>
   <style>
-    /* Apply background image to the body */
     body {
       background-image: url('https://pplx-res.cloudinary.com/image/upload/v1739383452/user_uploads/RCbhFHZbGSBfQfr/thumb-1920-1000996.jpg');
       background-size: cover;
-      /* Cover the entire viewport */
       background-repeat: no-repeat;
-      /* Prevent the image from repeating */
       background-attachment: fixed;
-      /* Keep the background fixed while scrolling */
       color: black;
-      /* Set default text color to black */
     }
 
-   /* Outer Page Border */
-.page-container {
-  border: 10px solid black;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 1200px;
-  background-color: #FFFFFF; /* Solid white background */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
+    .page-container {
+      border: 10px solid black;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1200px;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
 
-    /* Main content and sidebar layout */
     .main-container {
       display: flex;
       justify-content: space-between;
@@ -44,7 +37,6 @@
       width: 250px;
     }
 
-    /* Profile Picture Styling */
     .profile-pic {
       max-width: 100%;
       height: auto;
@@ -53,7 +45,6 @@
       transform-origin: center;
     }
 
-    /* Vertical Column Boxes Styling */
     .vertical-columns {
       display: flex;
       flex-direction: column;
@@ -66,7 +57,6 @@
       border: 1px solid #ddd;
       border-radius: 5px;
     }
-    }
 
     .column h3 {
       font-size: 18px;
@@ -78,7 +68,6 @@
       line-height: 1.5;
     }
 
-    /* Navigation Styling */
     .nav {
       list-style-type: none;
       padding: 0;
@@ -89,10 +78,8 @@
     .nav li a {
       text-decoration: none;
       color: #333;
-      /* Adjust link color if needed */
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       .main-container {
         flex-direction: column;
@@ -107,7 +94,6 @@
 </head>
 
 <body>
-  <!-- Page Container -->
   <div class="page-container">
     <header>
       <h1>Welcome to Brett Cope's Autobiography</h1>
@@ -115,7 +101,7 @@
         <ul class="nav">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Me</a></li>
-          <li><a href="#journey">My Journey</a></li>
+          <li><a href="journey.html">My Journey</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -123,12 +109,10 @@
 
     <div class="main-container">
       <div class="main-content">
-        <!-- Home Section -->
         <section id="home">
           <img src="https://pplx-res.cloudinary.com/image/upload/v1739903675/user_uploads/fFKofITfzkGGCdo/imgae.jpg.jpg" alt="Brett Cope" class="profile-pic">
         </section>
 
-        <!-- About Section -->
         <section id="about">
           <h2>About Me</h2>
           <p>Hello. My name is Brett Cope.</p>
@@ -139,27 +123,19 @@
           <p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
           <p>I love and care for people, and I try to put others first before myself.</p>
         </section>
-
-        <!-- Journey Section -->
-        <section id="journey">
-          <h2>My Journey</h2>
-          <p>I am currently in a discipleship program called Emmaus, located in Compton, CA.</p>
-          <p>Since being here, I have maintained my sobriety, gotten closer to God, and become a stronger, more confident individual.</p>
-          <p>I can't begin to express how grateful I am for the URM and all the people who have supported me. My biggest thanks go to all who have helped.</p>
-          <p>I am grateful and have gained some form of peace, so I don't plan to stop making progress and will continue to look forward.</p>
-        </section>
       </div>
 
       <div class="sidebar">
-        <!-- Vertical Column Boxes -->
         <div class="vertical-columns">
           <div class="column">
             <h3>Column 1: Introduction</h3>
-            <p>My name is Brett Cope. You have likely read the "About Me" section, so I'll get right into the purpose of this autobiography and this website overall. My goal is to foster vulnerability, enhance professional networking, and continuously expand my knowledge with the ultimate aim of becoming a professional full-stack web developer. </p>
+            <p>My name is Brett Cope. You have likely read the "About Me" section, so I'll get right into the purpose of this autobiography and this website overall. My goal is to foster vulnerability, enhance professional networking, and continuously expand my knowledge with the ultimate aim of becoming a professional full-stack web developer.</p>
           </div>
           <div class="column">
             <h3>Column 2: Achievements</h3>
-            <p> My achievements include completing the Los Angeles Marathon in 2017 and approaching one year of sobriety. I have been expressing myself through art forms like painting and coloring, which represent meaningful personal milestones. These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.
+            <p>My achievements include completing the Los Angeles Marathon in 2017 and approaching one year of sobriety. I have been expressing myself through art forms like painting and coloring, which represent meaningful personal milestones. These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.</p>
+          </div>
+          <div class="column">
             <h3>Column 3: Future Goals</h3>
             <p>My future goals include becoming a full-stack web developer, maintaining my sobriety, and acquiring a reliable vehicle. These objectives demonstrate my commitment to professional growth, personal wellness, and practical life improvements. By pursuing these goals, I aim to create a stable and successful future for myself.</p>
           </div>
@@ -167,28 +143,23 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <footer style="text-align:center;">
       <p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
     </footer>
   </div>
   <script>
-    // Set the font size for the first <h1> element
     const heading = document.querySelector("h1");
     if (heading) {
       heading.style.fontSize = "2vw";
     }
-    // Select all <p> elements and set their font sizes
     const paragraphs = document.querySelectorAll("p");
     paragraphs.forEach((p) => {
       p.style.fontSize = "1.5vw";
     });
-    // Select the first <b> element and increase its font size
     const boldText = document.querySelector("b");
     if (boldText) {
-      boldText.style.fontSize = "2rem"; // Adjust as needed
+      boldText.style.fontSize = "2rem";
     }
-    // Add a resize event listener to adjust font sizes on window resize
     window.addEventListener('resize', () => {
       if (heading) {
         heading.style.fontSize = "2vw";
