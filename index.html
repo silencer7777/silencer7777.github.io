@@ -1,158 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <style>
-        body {
-            background-image: url('https://pplx-res.cloudinary.com/image/upload/v1739383452/user_uploads/RCbhFHZbGSBfQfr/thumb-1920-1000996.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: black;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brett Cope's Autobiography</title>
+  <style>
+    body {
+      background-image: url('https://pplx-res.cloudinary.com/image/upload/v1739383452/user_uploads/RCbhFHZbGSBfQfr/thumb-1920-1000996.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
 
-        .page-container {
-            border: 10px solid black;
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 1200px;
-            background-color: #FFFFFF;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
+    .page-container {
+      border: 10px solid black;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1200px;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .main-container {
-            display: flex;
-            justify-content: space-between;
-        }
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+    }
 
-        .main-content {
-            flex: 1;
-            padding-right: 20px;
-        }
+    .main-content {
+      flex: 1;
+      padding-right: 20px;
+    }
 
-        .sidebar {
-            width: 250px;
-        }
+    .sidebar {
+      width: 250px;
+    }
 
-        .profile-pic {
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            transform: scale(0.9);
-            transform-origin: center;
-        }
+    .profile-pic {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      transform: scale(0.9);
+      transform-origin: center;
+    }
 
-        .vertical-columns {
-            display: flex;
-            flex-direction: column;
-        }
+    .horizontal-columns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 20px;
+    }
 
-        .column {
-            background-color: #FFB347;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+    .column {
+      background-color: #FFB347;
+      padding: 20px;
+      margin-right: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      flex: 1;
+    }
 
-        .column h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+    .column:last-child {
+      margin-right: 0;
+    }
 
-        .column p {
-            font-size: 14px;
-            line-height: 1.5;
-        }
+    .column h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
 
-        .nav {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
+    .column p {
+      line-height: 1.5;
+    }
 
-        .nav li a {
-            text-decoration: none;
-            color: #333;
-        }
+    .nav {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
 
-        @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-            }
+    .nav li a {
+      text-decoration: none;
+      color: #333;
+    }
 
-            .sidebar {
-                width: 100%;
-                margin-top: 20px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .horizontal-columns {
+        flex-direction: column;
+      }
+
+      .column {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="page-container">
-        <header>
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="journey.html">Journey</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <!-- Add more navigation items as needed -->
-                </ul>
-            </nav>
-        </header>
+  <div class="page-container">
+    <header>
+      <h1>Welcome to Brett Cope's Autobiography</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="journey.html">My Journey</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <div class="main-container">
-            <main class="main-content">
-                <!-- Main content goes here -->
-                <h1>Welcome to Your Website</h1>
-                <p>This is the main content area. Add your page-specific content here.</p>
-            </main>
+    <div class="main-container">
+      <div class="main-content">
+        <section id="home">
+          <img src="https://pplx-res.cloudinary.com/image/upload/v1739903675/user_uploads/fFKofITfzkGGCdo/imgae.jpg.jpg" alt="Brett Cope" class="profile-pic">
+        </section>
 
-            <aside class="sidebar">
-                <!-- Sidebar content goes here -->
-                <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-                <div class="vertical-columns">
-                    <div class="column">
-                        <h3>About Me</h3>
-                        <p>A brief description about yourself or your website.</p>
-                    </div>
-                    <div class="column">
-                        <h3>Contact Info</h3>
-                        <p>Your contact information or a link to the contact page.</p>
-                    </div>
-                </div>
-            </aside>
-        </div>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>Hello. My name is Brett Cope.</p>
+          <p>I am a 28 year old male, born in 1996 in Apple Valley, CA.</p>
+          <p>I grew up loving nature and I always try my best to stay active.</p>
+          <p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
+          <p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports and eventually picked up painting as a recent hobby.</p>
+          <p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
+          <p>I love and care for people and I try to put others first before myself. Being a family man is valuable for me and I cherish every relationship in my life.
+             Having a strong will to learn and to progress is shown through my character and is affirmed through what others say about me.</p>
+        </section>
+      </div>
 
-        <footer>
-            <!-- Footer content goes here -->
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
-        </footer>
+      <div class="sidebar">
+        <!-- Sidebar content can be added here if needed -->
+      </div>
     </div>
 
-    <script>
-        function adjustFontSizes() {
-            const heading = document.querySelector("h1");
-            if (heading) {
-                heading.style.fontSize = "2vw";
-            }
+    <div class="horizontal-columns">
+      <div class="column">
+        <h3>Column 1: Introduction</h3>
+        <p>I'll get right into the purpose of this autobiography. My goal is to foster vulnerability, enhance professional networking and continuously expand my knowledge with the ultimate aim of becoming a professional full-stack web developer.</p>
+      </div>
+      <div class="column">
+        <h3>Column 2: Achievements</h3>
+        <p>I completed the 2017 Los Angeles Marathon, been certified in the past, to operate heavy machinery like forklifts and skidsteers and other heavy equipment and I also have had two places of my own in the past. These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.</p>
+      </div>
+      <div class="column">
+        <h3>Column 3: Future Goals</h3>
+        <p>My future goals include becoming a full-stack web developer, finishing college, acquiring a vehicle and starting a family. These objectives demonstrate my commitment to professional growth, personal wellness, and practical life improvements. By pursuing these goals, I aim to create a stable and successful future for myself.</p>
+      </div>
+    </div>
 
-            const paragraphs = document.querySelectorAll("p");
-            paragraphs.forEach((p) => {
-                p.style.fontSize = "1.5vw";
-            });
-
-            const boldText = document.querySelector("b");
-            if (boldText) {
-                boldText.style.fontSize = "2rem";
-            }
-        }
-
-        adjustFontSizes();
-        window.addEventListener('resize', adjustFontSizes);
-    </script>
+    <footer style="text-align:center;">
+      <p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
+    </footer>
+  </div>
+  <script>
+    const heading = document.querySelector("h1");
+    if (heading) {
+      heading.style.fontSize = "2vw";
+    }
+    const paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach((p) => {
+      p.style.fontSize = "1.5vw";
+    });
+    const boldText = document.querySelector("b");
+    if (boldText) {
+      boldText.style.fontSize = "2rem";
+    }
+    window.addEventListener('resize', () => {
+      if (heading) {
+        heading.style.fontSize = "2vw";
+      }
+      paragraphs.forEach((p) => {
+        p.style.fontSize = "1.5vw";
+      });
+      if (boldText) {
+        boldText.style.fontSize = "2rem";
+      }
+    });
+  </script>
 </body>
+
 </html>
