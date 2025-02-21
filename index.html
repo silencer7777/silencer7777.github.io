@@ -12,6 +12,10 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       color: black;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
     }
 
     .page-container {
@@ -21,11 +25,15 @@
       max-width: 1200px;
       background-color: #FFFFFF;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .main-container {
       display: flex;
       justify-content: space-between;
+      flex: 1;
     }
 
     .main-content {
@@ -45,17 +53,24 @@
       transform-origin: center;
     }
 
-    .vertical-columns {
+    .horizontal-columns {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 20px;
     }
 
     .column {
       background-color: #FFB347;
       padding: 20px;
-      margin-bottom: 20px;
+      margin-right: 10px;
       border: 1px solid #ddd;
       border-radius: 5px;
+      flex: 1;
+    }
+
+    .column:last-child {
+      margin-right: 0;
     }
 
     .column h3 {
@@ -87,6 +102,15 @@
       .sidebar {
         width: 100%;
         margin-top: 20px;
+      }
+
+      .horizontal-columns {
+        flex-direction: column;
+      }
+
+      .column {
+        margin-right: 0;
+        margin-bottom: 10px;
       }
     }
   </style>
@@ -126,20 +150,22 @@
       </div>
 
       <div class="sidebar">
-        <div class="vertical-columns">
-          <div class="column">
-            <h3>Column 1: Introduction</h3>
-            <p>I'll get right into the purpose of this autobiography. My goal is to foster vulnerability, enhance professional networking and continuously expand my knowledge with the ultimate aim of becoming a professional full-stack web developer.</p>
-          </div>
-          <div class="column">
-            <h3>Column 2: Achievements</h3>
-            <p>I completed the 2017 Los Angeles Marathon, been certified in the past, to operate heavy machinery like forklifts and skidsteers and other heavy equipment and I also have had two places of my own in the past. These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.</p>
-          </div>
-          <div class="column">
-            <h3>Column 3: Future Goals</h3>
-            <p>My future goals include becoming a full-stack web developer, finishing college, acquiring a vehicle and starting a family. These objectives demonstrate my commitment to professional growth, personal wellness, and practical life improvements. By pursuing these goals, I aim to create a stable and successful future for myself.</p>
-          </div>
-        </div>
+        <!-- Sidebar content can be added here if needed -->
+      </div>
+    </div>
+
+    <div class="horizontal-columns">
+      <div class="column">
+        <h3>Column 1: Introduction</h3>
+        <p>I'll get right into the purpose of this autobiography. My goal is to foster vulnerability, enhance professional networking and continuously expand my knowledge with the ultimate aim of becoming a professional full-stack web developer.</p>
+      </div>
+      <div class="column">
+        <h3>Column 2: Achievements</h3>
+        <p>I completed the 2017 Los Angeles Marathon, been certified in the past, to operate heavy machinery like forklifts and skidsteers and other heavy equipment and I also have had two places of my own in the past. These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.</p>
+      </div>
+      <div class="column">
+        <h3>Column 3: Future Goals</h3>
+        <p>My future goals include becoming a full-stack web developer, finishing college, acquiring a vehicle and starting a family. These objectives demonstrate my commitment to professional growth, personal wellness, and practical life improvements. By pursuing these goals, I aim to create a stable and successful future for myself.</p>
       </div>
     </div>
 
