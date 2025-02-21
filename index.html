@@ -16,6 +16,7 @@
       flex-direction: column;
       min-height: 100vh;
       margin: 0;
+      font-size: 16px;
     }
 
     .page-container {
@@ -74,11 +75,12 @@
     }
 
     .column h3 {
-      font-size: 18px;
+      font-size: 2em;
       margin-bottom: 10px;
     }
 
     .column p {
+      font-size: 1em;
       line-height: 1.5;
     }
 
@@ -161,7 +163,7 @@
       </div>
       <div class="column">
         <h3>Achievements</h3>
-        <p>I completed the 2017 Los Angeles Marathon, been certified in the past to operate heavy machinery like forklifts and skidsteers and other heavy equipment.I lived in two different appartments in my past and am hoping to become a homeowner in the next few years.These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.</p>
+        <p>I completed the 2017 Los Angeles Marathon, been certified in the past to operate heavy machinery like forklifts and skidsteers and other heavy equipment. I lived in two different apartments in my past and am hoping to become a homeowner in the next few years. These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.</p>
       </div>
       <div class="column">
         <h3>Future Goals</h3>
@@ -174,29 +176,23 @@
     </footer>
   </div>
   <script>
-    const heading = document.querySelector("h1");
-    if (heading) {
-      heading.style.fontSize = "2vw";
-    }
-    const paragraphs = document.querySelectorAll("p");
-    paragraphs.forEach((p) => {
-      p.style.fontSize = "1.5vw";
-    });
-    const boldText = document.querySelector("b");
-    if (boldText) {
-      boldText.style.fontSize = "2rem";
-    }
-    window.addEventListener('resize', () => {
+    function adjustFontSizes() {
+      const heading = document.querySelector("h1");
       if (heading) {
         heading.style.fontSize = "2vw";
       }
+      const paragraphs = document.querySelectorAll("p");
       paragraphs.forEach((p) => {
         p.style.fontSize = "1.5vw";
       });
+      const boldText = document.querySelector("b");
       if (boldText) {
         boldText.style.fontSize = "2rem";
       }
-    });
+    }
+
+    adjustFontSizes();
+    window.addEventListener('resize', adjustFontSizes);
   </script>
 </body>
 
