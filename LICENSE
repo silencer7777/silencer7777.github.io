@@ -1,42 +1,67 @@
-Custom Proprietary License
+Custom Proprietary Paid License
+
 Copyright (c) 2025 Brett Cope
 All Rights Reserved
+
 1. Definitions
 "Software" refers to the source code, object code, documentation, and any associated files in this repository.
 "Licensor" refers to Brett Cope, the copyright holder.
-"Licensee" refers to any person or entity accessing or using the Software.
+"Licensee" refers to any person or entity that has purchased a license to use the Software.
 "Third-Party Components" refers to any software, libraries, or tools included in or used by the Software that are owned by third parties.
+
 2. License Grant
-The Licensor hereby grants the Licensee a limited, non-exclusive, non-transferable, revocable license to access and use the Software solely for evaluation purposes. This license does not grant any rights to modify, distribute, sublicense, or sell the Software.
-3. Restrictions
+Upon payment of the applicable license fee, the Licensor grants the Licensee a non-exclusive, non-transferable license to use the Software subject to the terms and conditions of this agreement. The specific rights granted depend on the type of license purchased:
+
+a) Single-User License: Grants one individual the right to use the Software on up to two devices.
+b) Multi-User License: Grants the right for up to five named users within the same organization to use the Software.
+c) Enterprise License: Grants the right for unlimited users within a single organization to use the Software.
+
+3. License Term and Expiration
+This license is valid from the date of purchase until March 2, 2030. After this date, the license will expire, and the Licensee must cease all use of the Software unless a renewal is agreed upon by both parties[1][3].
+
+4. Purchasing Agreement
+a) License Fees: The Licensee agrees to pay the applicable license fee for the chosen license type as specified in the current pricing schedule.
+b) Payment Terms: License fees are due and payable upon purchase. All fees are non-refundable unless otherwise stated in the Licensor's refund policy.
+c) Renewal: For subscription-based licenses, the license will automatically renew for successive terms unless cancelled by either party with at least 30 days' notice before the end of the current term.
+d) Taxes: The Licensee is responsible for all applicable taxes, duties, or charges imposed by any government entity on the purchase of the license.
+
+5. Restrictions
 The Licensee shall not:
-a) Copy, modify, distribute, sell, sublicense, or create derivative works of the Software.
-b) Use the Software for any commercial purpose without prior written consent from the Licensor.
+a) Copy, modify, distribute, sell, sublicense, or create derivative works of the Software without explicit permission from the Licensor.
+b) Use the Software for any purpose beyond the scope of the purchased license.
 c) Reverse engineer, decompile, disassemble, or attempt to derive the source code of the Software.
 d) Remove or alter any copyright notices or proprietary markings on the Software.
-e) Use the Software in violation of applicable export control laws or regulations.
-4. Ownership
-The Licensor retains all right, title, and interest in and to the Software, including all intellectual property rights. Any third-party components included in the Software are subject to their respective licenses.
-5. Confidentiality
+e) Use the Software in violation of applicable laws or regulations.
+
+6. Ownership
+The Licensor retains all right, title, and interest in and to the Software, including all intellectual property rights. This license does not transfer any ownership rights to the Licensee.
+
+7. Support and Updates
+a) The Licensor will provide email support for the Software for the duration of the license term.
+b) The Licensee is entitled to receive all minor updates (e.g., 1.1 to 1.2) of the Software at no additional cost.
+c) Major version upgrades (e.g., 1.0 to 2.0) may require an additional fee.
+
+8. Confidentiality
 The Licensee agrees to maintain the confidentiality of any proprietary information related to the Software and shall not disclose such information to any third party without prior written consent from the Licensor.
-6. Updates and Modifications
-The Licensor reserves the right to provide updates or modifications to the Software at its sole discretion. Any updates provided shall be governed by this license unless accompanied by a separate license agreement.
-7. Export Compliance
-The Licensee agrees to comply with all applicable export control laws and regulations. The Licensee shall not export or re-export the Software without obtaining all necessary licenses or approvals from relevant governmental authorities.
-8. Data Protection and Privacy
-If applicable, the Licensee agrees to handle any personal data accessed through the use of this Software in compliance with all relevant data protection laws and regulations (e.g., GDPR). The Licensor disclaims responsibility for any misuse of personal data by the Licensee.
-9. Enforcement and Penalties
-a) Any unauthorized use of the Software will result in immediate termination of this license.
-b) The Licensor reserves the right to pursue legal remedies for violations of this license agreement.
-c) The Licensee agrees to indemnify and hold harmless the Licensor against any claims arising from misuse of the Software.
-10. No Warranty
-The Software is provided "AS IS," without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
-11. Limitation of Liability
-In no event shall the Licensor be liable for any direct, indirect, incidental, special, consequential damages, or other liabilities arising out of or related to your use of or inability to use the Software.
-12. Governing Law
+
+9. Warranty
+The Licensor warrants that the Software will perform substantially in accordance with the provided documentation for a period of 90 days from the date of purchase. The Licensor's sole obligation under this warranty shall be to provide bug fixes or workarounds for any substantial non-conformance of the Software.
+
+10. Limitation of Liability
+In no event shall the Licensor be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use or inability to use the Software, even if the Licensor has been advised of the possibility of such damages. In any case, the Licensor's entire liability under this agreement shall not exceed the amount actually paid by the Licensee for the Software license.
+
+11. Governing Law
 This license shall be governed by and construed in accordance with the laws of California, United States. Any disputes arising under this license shall be resolved exclusively in courts located in California.
-13. Third-Party Components
-The Software may include third-party components that are subject to separate licenses. The Licensee agrees to comply with all terms and conditions governing such third-party components.
-14. Termination
-This license is effective until terminated by either party. The Licensor may terminate this license immediately upon notice if the Licensee breaches any terms herein.
-By accessing or using this Software, you acknowledge that you have read and understood this agreement and ag
+
+12. Termination
+This license is effective until terminated or until the expiration date of March 2, 2030, whichever comes first. The Licensor may terminate this license if the Licensee fails to comply with any term or condition of this agreement. Upon termination or expiration, the Licensee must cease all use of the Software and destroy all copies[1].
+
+13. Acceptance of Terms
+By purchasing and using this Software, you acknowledge that you have read and understood this agreement and agree to be bound by its terms and conditions.
+
+14. Contact Information
+For license purchases, support, or any questions regarding this license, please contact Brett Cope at brettcope777@gmail.com.
+
+Last updated: March 2, 2025
+
+
