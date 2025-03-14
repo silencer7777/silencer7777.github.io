@@ -1,4 +1,3 @@
-javascript
 function adjustFontSizes() {
   const heading = document.querySelector("h1");
   const paragraphs = document.querySelectorAll("p");
@@ -17,8 +16,20 @@ function adjustFontSizes() {
   }
 }
 
+// Function to autoplay background music
+function playBackgroundMusic() {
+  const audio = document.getElementById("backgroundMusic");
+  
+  if (audio) {
+    audio.play().catch((error) => {
+      console.log("Autoplay was prevented. User interaction is required to play audio.");
+    });
+  }
+}
+
 // Run on page load
 adjustFontSizes();
+playBackgroundMusic();
 
 // Run on window resize
-window.addEventListener('resize', adjustFontSizes);
+window.addEventListener("resize", adjustFontSizes);
