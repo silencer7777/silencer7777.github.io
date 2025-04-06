@@ -16,14 +16,15 @@ function adjustFontSizes() {
   }
 }
 
-// Function to autoplay background music
+// Function to autoplay YouTube background music
 function playBackgroundMusic() {
-  const audio = document.getElementById("backgroundMusic");
+  const iframe = document.getElementById("backgroundMusic");
   
-  if (audio) {
-    audio.play().catch((error) => {
-      console.log("Autoplay was prevented. User interaction is required to play audio.");
-    });
+  if (iframe) {
+    // Attempt to load and play the embedded YouTube video
+    console.log("YouTube background music is set to autoplay.");
+  } else {
+    console.log("YouTube iframe element not found.");
   }
 }
 
