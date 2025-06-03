@@ -102,3 +102,10 @@ body {
     margin-top: 20px;
   }
 }
+
+/* --- Hide space animation on mobile (767px and below) --- */
+@media (max-width: 767px) {
+  .space-anim {
+    display: none !important;
+  }
+}
