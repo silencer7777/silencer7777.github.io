@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,118 +7,141 @@
 <title>Brett Cope's Autobiography</title>
 <style>
 body {
-background-image: url('https://pplx-res.cloudinary.com/image/upload/v1739383452/user_uploads/RCbhFHZbGSBfQfr/thumb-1920-1000996.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-color: black;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-margin: 0;
-font-size: 16px;
+  background-image: url('https://pplx-res.cloudinary.com/image/upload/v1739383452/user_uploads/RCbhFHZbGSBfQfr/thumb-1920-1000996.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 16px;
 }
 
 .page-container {
-border: 10px solid black;
-margin: 20px auto;
-padding: 20px;
-max-width: 1200px;
-background-color: #FFFFFF;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-flex: 1;
-display: flex;
-flex-direction: column;
+  border: 10px solid black;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-container {
-display: flex;
-justify-content: space-between;
-flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .main-content {
-flex: 1;
-padding-right: 20px;
+  flex: 1;
+  padding-right: 20px;
 }
 
 .sidebar {
-width: 250px;
+  width: 250px;
 }
 
 .profile-pic {
-max-width: 100%;
-height: auto;
-box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-transform: scale(0.9);
-transform-origin: center;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transform: scale(0.9);
+  transform-origin: center;
 }
 
 .horizontal-columns {
-display: flex;
-justify-content: space-between;
-margin-top: auto;
-padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 20px;
 }
 
 .column {
-background-color: #FFB347;
-padding: 20px;
-margin-right: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
-flex: 1;
+  background-color: #FFB347;
+  padding: 20px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
 }
 
 .column:last-child {
-margin-right: 0;
+  margin-right: 0;
 }
 
 .column h3 {
-font-size: 2em;
-margin-bottom: 10px;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .column p {
-font-size: 1em;
-line-height: 1.5;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 .nav {
-list-style-type: none;
-padding: 0;
-display: flex;
-justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav li a {
-text-decoration: none;
-color: #333;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Space animation canvases */
+.space-anim {
+  position: fixed;
+  top: 0;
+  width: 120px;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#leftSpaceAnim {
+  left: 0;
+}
+
+#rightSpaceAnim {
+  right: 0;
+  transform: scaleX(-1); /* Mirror for symmetry */
 }
 
 @media (max-width: 768px) {
-.main-container {
-flex-direction: column;
-}
+  .main-container {
+    flex-direction: column;
+  }
 
-.sidebar {
-width: 100%;
-margin-top: 20px;
-}
+  .sidebar {
+    width: 100%;
+    margin-top: 20px;
+  }
 
-.horizontal-columns {
-flex-direction: column;
-}
+  .horizontal-columns {
+    flex-direction: column;
+  }
 
-.column {
-margin-right: 0;
-margin-bottom: 10px;
-}
+  .column {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 </style>
 </head>
 
 <body>
+<!-- Space animation canvases -->
+<canvas id="leftSpaceAnim" class="space-anim"></canvas>
+<canvas id="rightSpaceAnim" class="space-anim"></canvas>
+
 <div class="page-container">
 <header>
 <h1>Welcome to Brett Cope's Autobiography</h1>
@@ -177,23 +200,101 @@ Having a strong will to learn and to progress is shown through my character and 
 </div>
 <script>
 function adjustFontSizes() {
-const heading = document.querySelector("h1");
-if (heading) {
-heading.style.fontSize = "2vw";
-}
-const paragraphs = document.querySelectorAll("p");
-paragraphs.forEach((p) => {
-p.style.fontSize = "1.5vw";
-});
-const boldText = document.querySelector("b");
-if (boldText) {
-boldText.style.fontSize = "2rem";
-}
+  const heading = document.querySelector("h1");
+  if (heading) {
+    heading.style.fontSize = "2vw";
+  }
+  const paragraphs = document.querySelectorAll("p");
+  paragraphs.forEach((p) => {
+    p.style.fontSize = "1.5vw";
+  });
+  const boldText = document.querySelector("b");
+  if (boldText) {
+    boldText.style.fontSize = "2rem";
+  }
 }
 
 adjustFontSizes();
 window.addEventListener('resize', adjustFontSizes);
+
+// SPACE ANIMATION SCRIPT
+function createSpaceAnimation(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = 120;
+  canvas.height = window.innerHeight;
+
+  const stars = Array.from({length: 40}, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.8 + 0.5,
+    speed: Math.random() * 0.6 + 0.2,
+    alpha: Math.random() * 0.5 + 0.5
+  }));
+
+  const planets = [
+    {x: 60, y: 100, r: 18, color: '#6cf', speed: 0.2, angle: 0},
+    {x: 90, y: 350, r: 12, color: '#fc6', speed: 0.1, angle: 0},
+    {x: 30, y: 600, r: 8, color: '#c6f', speed: 0.15, angle: 0}
+  ];
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw stars
+    stars.forEach(star => {
+      ctx.save();
+      ctx.globalAlpha = star.alpha;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
+      ctx.fillStyle = '#fff';
+      ctx.shadowColor = '#fff';
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.restore();
+
+      // Animate star
+      star.y += star.speed;
+      if (star.y > canvas.height) {
+        star.y = 0;
+        star.x = Math.random() * canvas.width;
+      }
+    });
+
+    // Draw planets
+    planets.forEach(planet => {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(planet.x, planet.y + Math.sin(planet.angle) * 10, planet.r, 0, 2 * Math.PI);
+      ctx.fillStyle = planet.color;
+      ctx.shadowColor = planet.color;
+      ctx.shadowBlur = 20;
+      ctx.fill();
+      ctx.restore();
+
+      // Animate planet
+      planet.angle += planet.speed * 0.01;
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+}
+
+// Initialize both sides
+createSpaceAnimation('leftSpaceAnim');
+createSpaceAnimation('rightSpaceAnim');
+
+// Adjust canvas height on resize
+window.addEventListener('resize', () => {
+  document.querySelectorAll('.space-anim').forEach(canvas => {
+    canvas.height = window.innerHeight;
+  });
+});
 </script>
 </body>
 
 </html>
+
