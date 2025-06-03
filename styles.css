@@ -72,6 +72,26 @@ body {
   color: #333;
 }
 
+/* --- Space Animation Canvases --- */
+.space-anim {
+  position: fixed;
+  top: 0;
+  width: 120px;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#leftSpaceAnim {
+  left: 0;
+}
+
+#rightSpaceAnim {
+  right: 0;
+  transform: scaleX(-1); /* Mirror for symmetry */
+}
+/* --- End Space Animation Canvases --- */
+
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
@@ -82,25 +102,3 @@ body {
     margin-top: 20px;
   }
 }
-script.js:
-
-javascript
-function adjustFontSizes() {
-  const heading = document.querySelector("h1");
-  if (heading) {
-    heading.style.fontSize = "2vw";
-  }
-
-  const paragraphs = document.querySelectorAll("p");
-  paragraphs.forEach((p) => {
-    p.style.fontSize = "1.5vw";
-  });
-
-  const boldText = document.querySelector("b");
-  if (boldText) {
-    boldText.style.fontSize = "2rem";
-  }
-}
-
-adjustFontSizes();
-window.addEventListener('resize', adjustFontSizes);
