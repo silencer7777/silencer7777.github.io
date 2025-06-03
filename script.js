@@ -94,17 +94,30 @@ function createSpaceAnimation(canvasId) {
   draw();
 }
 
+// Helper function to detect mobile
+function isMobile() {
+  return window.innerWidth <= 767;
+}
+
 // Run on page load
 adjustFontSizes();
 playBackgroundMusic();
-createSpaceAnimation('leftSpaceAnim');
-createSpaceAnimation('rightSpaceAnim');
+
+// Only run space animations if not on mobile
+if (!isMobile()) {
+  createSpaceAnimation('leftSpaceAnim');
+  createSpaceAnimation('rightSpaceAnim');
+}
 
 // Run on window resize
 window.addEventListener("resize", adjustFontSizes);
 window.addEventListener('resize', () => {
+  // Adjust canvas height and re-run or clear animation based on device size
   document.querySelectorAll('.space-anim').forEach(canvas => {
     canvas.height = window.innerHeight;
+    if (isMobile()) {
+      const ctx = canvas.getContext('2d');
+      ctx && ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
   });
 });
-
