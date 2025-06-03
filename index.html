@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,103 +118,106 @@ body {
   .main-container {
     flex-direction: column;
   }
-
   .sidebar {
     width: 100%;
     margin-top: 20px;
   }
-
   .horizontal-columns {
     flex-direction: column;
   }
-
   .column {
     margin-right: 0;
     margin-bottom: 10px;
   }
 }
+
+/* --- Hide space animation on mobile (767px and below) --- */
+@media (max-width: 767px) {
+  canvas.space-anim {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
 </style>
 </head>
-
 <body>
 <!-- Space animation canvases -->
 <canvas id="leftSpaceAnim" class="space-anim"></canvas>
 <canvas id="rightSpaceAnim" class="space-anim"></canvas>
 
 <div class="page-container">
-<header>
-<h1>Welcome to Brett Cope's Autobiography</h1>
-<nav>
-<ul class="nav">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About Me</a></li>
-<li><a href="journey.html">My Journey</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
-
-<div class="main-container">
-<div class="main-content">
-<section id="home">
-<img src="https://pplx-res.cloudinary.com/image/upload/v1739903675/user_uploads/fFKofITfzkGGCdo/imgae.jpg.jpg" alt="Brett Cope" class="profile-pic">
-</section>
-
-<section id="about">
-<h2>About Me</h2>
-<p>Hello. My name is Brett Cope.</p>
-<p>I am a 28 year old male, born in 1996 in Apple Valley, CA.</p>
-<p>I grew up loving nature and I always try my best to stay active.</p>
-<p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
-<p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports and eventually picked up painting as a recent hobby.</p>
-<p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
-<p>I love and care for people and I try to put others first before myself. Being a family man is valuable for me and I cherish every relationship in my life.
-Having a strong will to learn and to progress is shown through my character and is affirmed through what others say about me.</p>
-</section>
-</div>
-
-<div class="sidebar">
-<!-- Sidebar content can be added here if needed -->
-</div>
-</div>
-
-<div class="horizontal-columns">
-<div class="column">
-<h3>Introduction</h3>
-<p>I’m Brett Cope, a 28-year-old from Apple Valley, CA, driven by passion, resilience, and a deep commitment to growth. Through diverse experiences—from skateboarding to painting—I’ve learned the power of vulnerability and connection. This autobiography is my honest journey of self-discovery and ambition, as I strive to evolve personally and professionally toward becoming a full-stack web developer. Guided by values of love, dedication, and continuous learning, I invite you to explore the story behind my goals and achievements.</p>
-</div>
-<div class="column">
-<h3>Achievements</h3>
-<p>I completed the 2017 Los Angeles Marathon, been certified in the past to operate heavy machinery like forklifts and skidsteers and other heavy equipment. I lived in two different apartments in my past and am hoping to become a homeowner in the next few years. These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.</p>
-</div>
-<div class="column">
-<h3>Future Goals</h3>
-<p>My future goals include becoming a full-stack web developer, finishing college, acquiring a vehicle and starting a family. These objectives demonstrate my commitment to professional growth, personal wellness, and practical life improvements. By pursuing these goals, I aim to create a stable and successful future for myself.</p>
-</div>
-</div>
-
-<footer style="text-align:center;">
-<p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
-</footer>
+  <header>
+    <h1>Welcome to Brett Cope's Autobiography</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="journey.html">My Journey</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main-container">
+    <div class="main-content">
+      <section id="home">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1739903675/user_uploads/fFKofITfzkGGCdo/imgae.jpg.jpg" alt="Brett Cope" class="profile-pic">
+      </section>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Hello. My name is Brett Cope.</p>
+        <p>I am a 28 year old male, born in 1996 in Apple Valley, CA.</p>
+        <p>I grew up loving nature and I always try my best to stay active.</p>
+        <p>At the age of 10, I hopped on a skateboard for the first time and immediately fell in love with the sport.</p>
+        <p>As I grew older, I explored a variety of different hobbies, from skateboarding to playing sports and eventually picked up painting as a recent hobby.</p>
+        <p>Every hobby I commit myself to helps me self-reflect and connect with people.</p>
+        <p>I love and care for people and I try to put others first before myself. Being a family man is valuable for me and I cherish every relationship in my life.
+        Having a strong will to learn and to progress is shown through my character and is affirmed through what others say about me.</p>
+      </section>
+    </div>
+    <div class="sidebar">
+      <!-- Sidebar content can be added here if needed -->
+    </div>
+  </div>
+  <div class="horizontal-columns">
+    <div class="column">
+      <h3>Introduction</h3>
+      <p>I’m Brett Cope, a 28-year-old from Apple Valley, CA, driven by passion, resilience, and a deep commitment to growth. Through diverse experiences—from skateboarding to painting—I’ve learned the power of vulnerability and connection. This autobiography is my honest journey of self-discovery and ambition, as I strive to evolve personally and professionally toward becoming a full-stack web developer. Guided by values of love, dedication, and continuous learning, I invite you to explore the story behind my goals and achievements.</p>
+    </div>
+    <div class="column">
+      <h3>Achievements</h3>
+      <p>I completed the 2017 Los Angeles Marathon, been certified in the past to operate heavy machinery like forklifts and skidsteers and other heavy equipment. I lived in two different apartments in my past and am hoping to become a homeowner in the next few years. These accomplishments demonstrate my commitment to personal growth and self-improvement, with the ultimate goal of becoming a professional full-stack web developer.</p>
+    </div>
+    <div class="column">
+      <h3>Future Goals</h3>
+      <p>My future goals include becoming a full-stack web developer, finishing college, acquiring a vehicle and starting a family. These objectives demonstrate my commitment to professional growth, personal wellness, and practical life improvements. By pursuing these goals, I aim to create a stable and successful future for myself.</p>
+    </div>
+  </div>
+  <footer style="text-align:center;">
+    <p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
+  </footer>
 </div>
 <script>
 function adjustFontSizes() {
   const heading = document.querySelector("h1");
-  if (heading) {
-    heading.style.fontSize = "2vw";
-  }
   const paragraphs = document.querySelectorAll("p");
-  paragraphs.forEach((p) => {
-    p.style.fontSize = "1.5vw";
-  });
   const boldText = document.querySelector("b");
+
+  if (heading) {
+    heading.style.fontSize = `clamp(24px, 2vw, 48px)`;
+  }
+
+  paragraphs.forEach((p) => {
+    p.style.fontSize = `clamp(16px, 1.5vw, 24px)`;
+  });
+
   if (boldText) {
-    boldText.style.fontSize = "2rem";
+    boldText.style.fontSize = `clamp(20px, 2rem, 32px)`;
   }
 }
-
-adjustFontSizes();
-window.addEventListener('resize', adjustFontSizes);
 
 // SPACE ANIMATION SCRIPT
 function createSpaceAnimation(canvasId) {
@@ -283,18 +285,33 @@ function createSpaceAnimation(canvasId) {
   draw();
 }
 
-// Initialize both sides
-createSpaceAnimation('leftSpaceAnim');
-createSpaceAnimation('rightSpaceAnim');
+// Helper function to detect mobile
+function isMobile() {
+  return window.innerWidth <= 767;
+}
 
-// Adjust canvas height on resize
+// Only run space animations if not on mobile
+if (!isMobile()) {
+  createSpaceAnimation('leftSpaceAnim');
+  createSpaceAnimation('rightSpaceAnim');
+}
+
+// Adjust font sizes on load and resize
+adjustFontSizes();
+window.addEventListener('resize', adjustFontSizes);
+
+// Adjust canvas height and clear canvases if on mobile
 window.addEventListener('resize', () => {
   document.querySelectorAll('.space-anim').forEach(canvas => {
     canvas.height = window.innerHeight;
+    if (isMobile()) {
+      const ctx = canvas.getContext('2d');
+      ctx && ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
   });
 });
 </script>
 </body>
-
 </html>
+
 
