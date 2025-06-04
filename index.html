@@ -73,7 +73,7 @@ const planetTextures = {
   milkyway: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Milky_Way_Arch.jpg'
 };
 
-// --- Preload Images ---
+// Preload all images and call callback when done
 function preloadImages(urls, callback) {
   const images = {};
   let loaded = 0, total = Object.keys(urls).length;
@@ -85,19 +85,66 @@ function preloadImages(urls, callback) {
       loaded++;
       if (loaded === total) callback(images);
     };
+    images[key].onerror = () => {
+      loaded++;
+      if (loaded === total) callback(images);
+    };
   }
 }
 
-// --- Animation Logic ---
+// Animation for each side canvas
 function startSideSpaceAnimation(images, canvasId, isLeft) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  function resizeCanvas() {
+
+  // Planets and stars will be re-initialized on resize
+  let planets = [];
+  let stars = [];
+
+  function init() {
     canvas.width = 140;
     canvas.height = window.innerHeight;
+
+    // --- Stars ---
+    stars = Array.from({length: 40}, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.8 + 0.5,
+      alpha: Math.random() * 0.5 + 0.5,
+      speed: Math.random() * 0.6 + 0.2
+    }));
+
+    // --- Planets Data (positions staggered vertically) ---
+    planets = [
+      {
+        name: 'Mars',
+        x: canvas.width/2, y: 120, r: 28,
+        texture: images.mars,
+        moons: [
+          { r: 6, dist: 38, speed: 0.008, angle: Math.random() * Math.PI * 2 }
+        ]
+      },
+      {
+        name: 'Neptune',
+        x: canvas.width/2, y: canvas.height/2, r: 34,
+        texture: images.neptune,
+        moons: [
+          { r: 7, dist: 52, speed: 0.006, angle: Math.random() * Math.PI * 2 }
+        ]
+      },
+      {
+        name: 'Saturn',
+        x: canvas.width/2, y: canvas.height-120, r: 40,
+        texture: images.saturn,
+        ring: images.saturnRing,
+        moons: [
+          { r: 8, dist: 58, speed: 0.004, angle: Math.random() * Math.PI * 2 },
+          { r: 5, dist: 44, speed: 0.007, angle: Math.random() * Math.PI * 2 }
+        ]
+      }
+    ];
   }
-  resizeCanvas();
 
   // --- Milky Way band ---
   function drawMilkyWay() {
@@ -109,15 +156,6 @@ function startSideSpaceAnimation(images, canvasId, isLeft) {
     ctx.restore();
     ctx.globalAlpha = 1;
   }
-
-  // --- Stars ---
-  const stars = Array.from({length: 40}, () => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    r: Math.random() * 1.8 + 0.5,
-    alpha: Math.random() * 0.5 + 0.5,
-    speed: Math.random() * 0.6 + 0.2
-  }));
 
   function drawStars() {
     stars.forEach(star => {
@@ -140,37 +178,6 @@ function startSideSpaceAnimation(images, canvasId, isLeft) {
     });
   }
 
-  // --- Planets Data (positions staggered vertically) ---
-  const planets = [
-    {
-      name: 'Mars',
-      x: canvas.width/2, y: 120, r: 28,
-      texture: images.mars,
-      moons: [
-        { r: 6, dist: 38, speed: 0.008, angle: Math.random() * Math.PI * 2 }
-      ]
-    },
-    {
-      name: 'Neptune',
-      x: canvas.width/2, y: canvas.height/2, r: 34,
-      texture: images.neptune,
-      moons: [
-        { r: 7, dist: 52, speed: 0.006, angle: Math.random() * Math.PI * 2 }
-      ]
-    },
-    {
-      name: 'Saturn',
-      x: canvas.width/2, y: canvas.height-120, r: 40,
-      texture: images.saturn,
-      ring: images.saturnRing,
-      moons: [
-        { r: 8, dist: 58, speed: 0.004, angle: Math.random() * Math.PI * 2 },
-        { r: 5, dist: 44, speed: 0.007, angle: Math.random() * Math.PI * 2 }
-      ]
-    }
-  ];
-
-  // --- Draw a planet with texture and optional ring ---
   function drawPlanet(planet) {
     // Draw ring if present
     if (planet.ring) {
@@ -201,7 +208,6 @@ function startSideSpaceAnimation(images, canvasId, isLeft) {
     ctx.restore();
   }
 
-  // --- Draw a moon with texture ---
   function drawMoon(planet, moon) {
     moon.angle += moon.speed;
     const mx = planet.x + Math.cos(moon.angle) * moon.dist;
@@ -226,7 +232,6 @@ function startSideSpaceAnimation(images, canvasId, isLeft) {
     ctx.restore();
   }
 
-  // --- Animation Loop ---
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawMilkyWay();
@@ -238,16 +243,17 @@ function startSideSpaceAnimation(images, canvasId, isLeft) {
     requestAnimationFrame(animate);
   }
 
+  // Initialize and start animation
+  init();
   animate();
 
-  // --- Responsive resize ---
-  window.addEventListener('resize', resizeCanvas);
+  // Redraw on resize
   window.addEventListener('resize', () => {
-    planets[1].y = canvas.height/2;
-    planets[2].y = canvas.height-120;
+    init();
   });
 }
 
+// Only start animation after all images are loaded!
 preloadImages(planetTextures, function(images) {
   startSideSpaceAnimation(images, 'leftSpaceCanvas', true);
   startSideSpaceAnimation(images, 'rightSpaceCanvas', false);
@@ -255,6 +261,7 @@ preloadImages(planetTextures, function(images) {
 </script>
 </body>
 </html>
+
 
 
 
