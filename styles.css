@@ -91,7 +91,7 @@ body {
 .side-space-canvas {
   position: fixed;
   top: 0;
-  width: 320px; /* Wide for full visibility */
+  width: 320px;
   height: 100vh;
   z-index: 1;
   pointer-events: none;
