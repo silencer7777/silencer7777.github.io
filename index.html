@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brett Cope's Autobiography</title>
   <style>
     body {
@@ -108,7 +108,8 @@
       }
       .horizontal-columns {
         flex-direction: column;
-      } .column {
+      }
+      .column {
         margin-right: 0;
         margin-bottom: 10px;
       }
@@ -171,9 +172,9 @@
           p.createCanvas(140, window.innerHeight, p.WEBGL);
           p.noStroke();
           planets = [
-            { y: -window.innerHeight/2 + 120, r: 28, ringColor: '#F9D923', ringWidth: 12, ringTilt: p.PI/4, ringSpin: 0.013, color: '#3ABEFF', moonCount: 1 },
-            { y: 0, r: 34, ringColor: '#B983FF', ringWidth: 16, ringTilt: p.PI/3, ringSpin: 0.013, color: '#A3F7BF', moonCount: 2 },
-            { y: window.innerHeight/2 - 120, r: 40, ringColor: '#FF61A6', ringWidth: 12, ringTilt: p.PI/4, ringSpin: 0.013, color: '#F7B801', moonCount: 3 }
+            { y: -window.innerHeight/2 + 120, r: 28, ringColor: '#F9D923', ringWidth: 12, ringTilt: p.PI/6, ringSpin: 0.01, color: '#3ABEFF', moonCount: 1, moonSpeed: 0.008, ringA: 50, ringB: 20 },
+            { y: 0, r: 34, ringColor: '#B983FF', ringWidth: 16, ringTilt: p.PI/3, ringSpin: 0.02, color: '#A3F7BF', moonCount: 2, moonSpeed: 0.015, ringA: 60, ringB: 25 },
+            { y: window.innerHeight/2 - 120, r: 40, ringColor: '#FF61A6', ringWidth: 12, ringTilt: p.PI/4, ringSpin: 0.005, color: '#F7B801', moonCount: 3, moonSpeed: 0.012, ringA: 70, ringB: 35 }
           ];
           if (side === 'right') {
             planets[0].color = '#9D65C9'; planets[0].ringColor = '#FFB347';
@@ -223,13 +224,10 @@
             p.stroke(planet.ringColor);
             p.strokeWeight(planet.ringWidth);
             p.beginShape();
-            let ringPoints = 100;
-            let a = planet.r * (idx === 2 ? 1.5 : 1.8);
-            let b = planet.r * (idx === 2 ? 0.6 : 0.7);
-            for (let i = 0; i <= ringPoints; i++) {
-              let theta = p.TWO_PI * i / ringPoints;
-              let x = a * Math.cos(theta);
-              let y = b * Math.sin(theta);
+            for (let i = 0; i <= 100; i++) {
+              let theta = p.TWO_PI * i / 100;
+              let x = planet.ringA * Math.cos(theta);
+              let y = planet.ringB * Math.sin(theta);
               p.vertex(x, y, 0);
             }
             p.endShape();
@@ -237,7 +235,7 @@
 
             // Moons
             for (let m = 0; m < planet.moonCount; m++) {
-              let angle = p.frameCount * 0.01 + m * p.TWO_PI / planet.moonCount;
+              let angle = p.frameCount * planet.moonSpeed + m * p.TWO_PI / planet.moonCount;
               let mx = Math.cos(angle) * (planet.r + 32);
               let my = Math.sin(angle) * (planet.r + 32);
               p.push();
