@@ -16,7 +16,6 @@
       margin: 0;
       font-size: 16px;
     }
-
     .page-container {
       border: 10px solid black;
       margin: 20px auto;
@@ -27,22 +26,18 @@
       position: relative;
       z-index: 2;
     }
-
     h1 {
       text-align: center;
       color: #333;
       font-size: 2vw;
     }
-
     .contact-info {
       margin-top: 20px;
     }
-
     .contact-info p {
       margin: 10px 0;
       font-size: 1.25vw;
     }
-
     .nav {
       list-style-type: none;
       padding: 0;
@@ -50,13 +45,11 @@
       justify-content: space-around;
       margin-bottom: 20px;
     }
-
     .nav li a {
       text-decoration: none;
       color: #333;
       font-weight: bold;
     }
-
     .side-planet-canvas {
       position: fixed;
       top: 0;
@@ -67,7 +60,6 @@
     }
     #leftPlanetCanvas { left: 0; }
     #rightPlanetCanvas { right: 0; }
-
     .scripture-box {
       background-color: #FFA726;
       color: #222;
@@ -83,7 +75,6 @@
       line-height: 1.7;
       font-weight: 500;
     }
-
     @media (max-width: 900px) {
       .side-planet-canvas { display: none; }
     }
@@ -113,29 +104,26 @@
         </ul>
       </nav>
     </header>
-
     <div class="contact-info">
       <p><strong>Phone:</strong> 760-382-7312</p>
       <p><strong>Business Email:</strong> brettcope777@gmail.com</p>
       <p><strong>Instagram:</strong> Follow me @soldier4christ_33</p>
       <p><strong>TikTok:</strong> @beecee591</p>
     </div>
-
     <footer style="text-align:center; margin-top: 20px;">
       <div class="scripture-box">
         Romans 12:10 — Be devoted to one another in love. Honor one another above yourselves.
       </div>
     </footer>
   </div>
-  <!-- p5.js CDN -->
+  <!-- 3D Animations -->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.min.js"></script>
   <script>
     function create3DRingSketch(side) {
       return function(p) {
         let planets = [];
         let canvasHeight;
-        let verticalPadding = 60; // Add padding to top and bottom
-
+        let verticalPadding = 60;
         p.setup = function() {
           canvasHeight = window.innerHeight + verticalPadding * 2;
           p.createCanvas(140, canvasHeight, p.WEBGL);
@@ -151,19 +139,15 @@
             planets[2].color = '#F9D423'; planets[2].ringColor = '#6EB5FF';
           }
         };
-
         p.windowResized = function() {
           canvasHeight = window.innerHeight + verticalPadding * 2;
           p.resizeCanvas(140, canvasHeight);
           planets[0].y = -canvasHeight/2 + 120 + verticalPadding;
           planets[2].y = canvasHeight/2 - 120 - verticalPadding;
         };
-
         p.draw = function() {
           p.clear();
           p.background(0, 0, 0, 0);
-
-          // Stars
           p.push();    p.translate(0, 0, -100);
           for (let i = 0; i < 40; i++) {
             p.push();
@@ -173,19 +157,13 @@
             p.pop();
           }
           p.pop();
-
-          // Planets and Rings
           for (let idx = 0; idx < planets.length; idx++) {
             let planet = planets[idx];
             p.push();
             p.translate(0, planet.y, 0);
-
-            // Planet
             p.noStroke();
             p.fill(planet.color);
             p.sphere(planet.r);
-
-            // Ring
             p.push();
             p.rotateX(planet.ringTilt);
             p.rotateZ(p.frameCount * planet.ringSpin);
@@ -201,8 +179,6 @@
             }
             p.endShape();
             p.pop();
-
-            // Moons
             for (let m = 0; m < planet.moonCount; m++) {
               let angle = p.frameCount * planet.moonSpeed + m * p.TWO_PI / planet.moonCount;
               let mx = Math.cos(angle) * (planet.r + 32);
@@ -213,13 +189,11 @@
               p.sphere(6);
               p.pop();
             }
-
             p.pop();
           }
         };
       };
     }
-
     new p5(create3DRingSketch('left'), document.getElementById('leftPlanetCanvas'));
     new p5(create3DRingSketch('right'), document.getElementById('rightPlanetCanvas'));
   </script>
