@@ -12,6 +12,8 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       color: black;
+      margin: 0;
+      font-size: 16px;
     }
 
     .page-container {
@@ -21,6 +23,8 @@
       max-width: 1200px;
       background-color: #FFFFFF;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      position: relative;
+      z-index: 2;
     }
 
     .nav {
@@ -34,10 +38,58 @@
       text-decoration: none;
       color: #333;
     }
+
+    .side-planet-canvas {
+      position: fixed;
+      top: 0;
+      width: 140px;
+      height: 100vh;
+      z-index: 1;
+      pointer-events: none;
+    }
+    #leftPlanetCanvas { left: 0; }
+    #rightPlanetCanvas { right: 0; }
+
+    .scripture-box {
+      background-color: #FFA726;
+      color: #222;
+      padding: 1.2em 2em;
+      border-radius: 12px;
+      margin: 2em auto 0 auto;
+      font-size: 1.25em;
+      font-family: 'Georgia', serif;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      border: 2px solid #FB8C00;
+      max-width: 600px;
+      text-align: center;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 2vw;
+    }
+    p {
+      font-size: 1.5vw;
+    }
+
+    @media (max-width: 900px) {
+      .side-planet-canvas { display: none; }
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 1.5em; }
+      p { font-size: 1em; }
+      .scripture-box {
+        font-size: 1em;
+        padding: 1em;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <div id="leftPlanetCanvas" class="side-planet-canvas"></div>
+  <div id="rightPlanetCanvas" class="side-planet-canvas"></div>
   <div class="page-container">
     <header>
       <h1>My Journey</h1>
@@ -60,27 +112,106 @@
     </section>
 
     <footer style="text-align:center;">
-      <p>Romans 12:10 - Be devoted to one another in love. Honor one another above yourselves.</p>
+      <div class="scripture-box">
+        Romans 12:10 — Be devoted to one another in love. Honor one another above yourselves.
+      </div>
     </footer>
   </div>
+  <!-- p5.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.min.js"></script>
   <script>
-    const heading = document.querySelector("h1");
-    if (heading) {
-      heading.style.fontSize = "2vw";
+    function create3DRingSketch(side) {
+      return function(p) {
+        let planets = [];
+        let canvasHeight;
+        let verticalPadding = 60; // Add padding to top and bottom
+
+        p.setup = function() {
+          canvasHeight = window.innerHeight + verticalPadding * 2;
+          p.createCanvas(140, canvasHeight, p.WEBGL);
+          p.noStroke();
+          planets = [
+            { y: -canvasHeight/2 + 120 + verticalPadding, r: 28, ringColor: '#F9D923', ringWidth: 12, ringTilt: p.PI/6, ringSpin: 0.01, color: '#3ABEFF', moonCount: 1, moonSpeed: 0.008, ringA: 50, ringB: 20 },
+            { y: 0, r: 34, ringColor: '#B983FF', ringWidth: 16, ringTilt: p.PI/3, ringSpin: 0.02, color: '#A3F7BF', moonCount: 2, moonSpeed: 0.015, ringA: 60, ringB: 25 },
+            { y: canvasHeight/2 - 120 - verticalPadding, r: 40, ringColor: '#FF61A6', ringWidth: 12, ringTilt: p.PI/4, ringSpin: 0.005, color: '#F7B801', moonCount: 3, moonSpeed: 0.012, ringA: 70, ringB: 35 }
+          ];
+          if (side === 'right') {
+            planets[0].color = '#9D65C9'; planets[0].ringColor = '#FFB347';
+            planets[1].color = '#FF5F7E'; planets[1].ringColor = '#80FF72';
+            planets[2].color = '#F9D423'; planets[2].ringColor = '#6EB5FF';
+          }
+        };
+
+        p.windowResized = function() {
+          canvasHeight = window.innerHeight + verticalPadding * 2;
+          p.resizeCanvas(140, canvasHeight);
+          planets[0].y = -canvasHeight/2 + 120 + verticalPadding;
+          planets[2].y = canvasHeight/2 - 120 - verticalPadding;
+        };
+
+        p.draw = function() {
+          p.clear();
+          p.background(0, 0, 0, 0);
+
+          // Stars
+          p.push();    p.translate(0, 0, -100);
+          for (let i = 0; i < 40; i++) {
+            p.push();
+            p.translate(p.random(-70, 70), p.random(-canvasHeight/2, canvasHeight/2), p.random(-40, 40));
+            p.fill(255, p.random(120, 220));
+            p.sphere(p.random(0.5, 1.7));
+            p.pop();
+          }
+          p.pop();
+
+          // Planets and Rings
+          for (let idx = 0; idx < planets.length; idx++) {
+            let planet = planets[idx];
+            p.push();
+            p.translate(0, planet.y, 0);
+
+            // Planet
+            p.noStroke();
+            p.fill(planet.color);
+            p.sphere(planet.r);
+
+            // Ring
+            p.push();
+            p.rotateX(planet.ringTilt);
+            p.rotateZ(p.frameCount * planet.ringSpin);
+            p.noFill();
+            p.stroke(planet.ringColor);
+            p.strokeWeight(planet.ringWidth);
+            p.beginShape();
+            for (let i = 0; i <= 100; i++) {
+              let theta = p.TWO_PI * i / 100;
+              let x = planet.ringA * Math.cos(theta);
+              let y = planet.ringB * Math.sin(theta);
+              p.vertex(x, y, 0);
+            }
+            p.endShape();
+            p.pop();
+
+            // Moons
+            for (let m = 0; m < planet.moonCount; m++) {
+              let angle = p.frameCount * planet.moonSpeed + m * p.TWO_PI / planet.moonCount;
+              let mx = Math.cos(angle) * (planet.r + 32);
+              let my = Math.sin(angle) * (planet.r + 32);
+              p.push();
+              p.translate(mx, my, 0);
+              p.fill(240);
+              p.sphere(6);
+              p.pop();
+            }
+
+            p.pop();
+          }
+        };
+      };
     }
-    const paragraphs = document.querySelectorAll("p");
-    paragraphs.forEach((p) => {
-      p.style.fontSize = "1.5vw";
-    });
-    window.addEventListener('resize', () => {
-      if (heading) {
-        heading.style.fontSize = "2vw";
-      }
-      paragraphs.forEach((p) => {
-        p.style.fontSize = "1.5vw";
-      });
-    });
+
+    new p5(create3DRingSketch('left'), document.getElementById('leftPlanetCanvas'));
+    new p5(create3DRingSketch('right'), document.getElementById('rightPlanetCanvas'));
   </script>
 </body>
-
 </html>
